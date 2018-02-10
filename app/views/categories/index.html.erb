@@ -25,7 +25,9 @@
         <div class="center-one">
             <table>
                 <tr>
-                    <th class="table-header"><%= @community_category.name%></th>
+                    <th class="table-header">
+                        <%= link_to @community_category.name, category_path(@community_category)%>
+                    </th>
                 </tr>
                 <tr>
                     <td>

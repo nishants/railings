@@ -7,4 +7,8 @@ class CategoriesController < ApplicationController
     @service_category   = Category.find_by(:name => "Services")
     @jobs_category      = Category.find_by(:name => "Jobs")
   end
+
+  def show
+    @category = Category.find(params[:id])
+  end
 end
