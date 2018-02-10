@@ -2,11 +2,11 @@
     <div class="leftbar">
         <a href="#"><h1>Railings</h1></a>
         <ul>
-            <a href="#">post to classifieds</a>
-            <li>my account</li>
+            <a href="#">Post</a>
+            <li>Account</li>
         </ul>
         <form>
-            <p>search rubyslist</p>
+            <p>Search</p>
             <input type="text" name="firstname" placeholder="search" size="20">
             <br>
             <input type="text" name="firstname" placeholder="where" size="20">
@@ -187,13 +187,13 @@
     </div>
     <div class="rightbar">
         <ul class="rightbar-top">
-            <li>help and faq</li>
+            <li><%= link_to 'Help and FAQ', pages_help_and_faq_path %></li>
             <li>avoid scams & fraud</li>
             <li>personal safety tips</li>
             <li class="rightbar-top">terms of use</li>
             <li>privacy policy</li>
             <li>about rubyslist</li>
-            <li>contact us</li>
+            <li><%= link_to 'Contact Us', pages_contact_us_path %></li>
         </ul>
     </div>
 </div>
