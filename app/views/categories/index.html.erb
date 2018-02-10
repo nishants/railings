@@ -25,62 +25,52 @@
         <div class="center-one">
             <table>
                 <tr>
-                    <th class="table-header">community</th>
-                </tr>
-                <tr>
-                    <td>
-                        <ul class="left-list">
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                        </ul>
-                        <ul class="right-list">
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th class="table-header">personals</th>
+                    <th class="table-header"><%= @community_category.name%></th>
                 </tr>
                 <tr>
                     <td>
                         <ul>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
+                            <% @community_category.subcategories.each do |subcategory|%>
+                            <li>
+                                <%= subcategory.name%>
+                            </li>
+                            <% end %>
                         </ul>
                     </td>
                 </tr>
             </table>
             <table>
                 <tr>
-                    <th class="table-header">services</th>
+                    <th class="table-header">
+                        <%= @personal_category.name %>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <% @personal_category.subcategories.each do |subcategory|%>
+                            <li>
+                                <%= subcategory.name%>
+                            </li>
+                            <% end %>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th class="table-header">
+                        <%= @service_category.name %>
+                    </th>
                 </tr>
                 <tr>
                     <td>
                         <ul class="left-list">
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                        </ul>
-                        <ul class="right-list">
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
+                            <% @service_category.subcategories.each do |subcategory|%>
+                            <li>
+                                <%= subcategory.name %>
+                            </li>
+                            <% end %>
                         </ul>
                     </td>
                 </tr>
@@ -89,58 +79,36 @@
         <div class="center-two">
             <table>
                 <tr>
-                    <th class="table-header">housing</th>
+                    <th class="table-header">
+                    <%= @housing_category.name %>
+                    </th>
                 </tr>
                 <tr>
                     <td>
-                        <ul>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
+                        <ul >
+                            <% @housing_category.subcategories.each do |subcategory|%>
+                                <li>
+                                    <%= subcategory.name %>
+                                </li>
+                            <% end %>
                         </ul>
                     </td>
                 </tr>
             </table>
             <table>
                 <tr>
-                    <th class="table-header">for sale</th>
+                    <th class="table-header">
+                        <%= @for_sale_category.name %>
+                    </th>
                 </tr>
                 <tr>
                     <td>
-                        <ul class="left-list">
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                        </ul>
-                        <ul class="right-list">
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
+                        <ul>
+                        <% @for_sale_category.subcategories.each do |subcategory|%>
+                            <li>
+                                <%= subcategory.name %>
+                            </li>
+                        <% end %>
                         </ul>
                     </td>
                 </tr>
@@ -149,36 +117,18 @@
         <div class="center-three">
             <table>
                 <tr>
-                    <th class="table-header">jobs</th>
+                    <th class="table-header">
+                        <%= @jobs_category.name %>
+                    </th>
                 </tr>
                 <tr>
                     <td>
                         <ul>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
+                            <% @jobs_category.subcategories.each do |subcategory|%>
+                                <li>
+                                    <%= subcategory.name %>
+                                </li>
+                            <% end %>
                         </ul>
                     </td>
                 </tr>
