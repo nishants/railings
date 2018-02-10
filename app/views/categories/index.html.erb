@@ -34,7 +34,7 @@
                         <ul>
                             <% @community_category.subcategories.each do |subcategory|%>
                             <li>
-                                <%= subcategory.name%>
+                                <%= link_to subcategory.name, category_subcategory_path(@community_category, subcategory)%>
                             </li>
                             <% end %>
                         </ul>

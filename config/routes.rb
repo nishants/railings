@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get '/pages/contact-us' => 'pages#contact_us'
 
  # CRUD
-  resources :categories
+  resources :categories do
+    resources :subcategories
+  end
 end
